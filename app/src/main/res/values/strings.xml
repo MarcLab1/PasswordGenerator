@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">PasswordGenerator</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="brackets">"Brackets ([,],{,},(,))"</string>
+    <string name="generate_password_using_chracter_set">Generate password using chracter set:</string>
+    <string name="length_of_gererated_password">Length of gererated password:</string>
+    <string name="upper_case_a_b_c">Upper-case (A,B,C,...)</string>
+    <string name="space">Space ( )</string>
+    <string name="lower_case_a_b_c">Lower-case (a,b,c,...)</string>
+    <string name="special">Special (!,#,$,%,,...)</string>
+    <string name="digits_0_1_2">Digits (0,1,2,...)</string>
+    <string name="minus">Minus(-)</string>
+    <string name="underscore">Underscore (_)</string>
+    <string name="generate_password">Generate Password</string>
+    <string name="password">Password:</string>
+    <string name="copy_password_to_clipboard">Copy password to clipboard</string>
+</resources>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+
+            >
+
+            <TextView
+                android:id="@+id/textView0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                style="@style/my_text_bigger_bold"
+                android:text="@string/generate_password_using_chracter_set"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/length_of_gererated_password"
+                app:layout_constraintBottom_toTopOf="@+id/checkboxuppercase"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView0" />
+
+
+            <NumberPicker
+                android:id="@+id/numberpicker"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/border_grey_2dp"
+                app:layout_constraintBottom_toTopOf="@+id/checkboxspace"
+                app:layout_constraintStart_toEndOf="@+id/textView1"
+                app:layout_constraintTop_toBottomOf="@+id/textView0" />
+
+            <CheckBox
+                android:id="@+id/checkboxuppercase"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:checked="true"
+                android:text="@string/upper_case_a_b_c"
+                app:layout_constraintEnd_toStartOf="@+id/checkboxspace"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+            <CheckBox
+                android:id="@+id/checkboxspace"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:checked="false"
+                android:text="@string/space"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/checkboxuppercase"
+                app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+            <CheckBox
+                android:id="@+id/checkboxlowercase"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:checked="true"
+                android:text="@string/lower_case_a_b_c"
+                app:layout_constraintEnd_toStartOf="@+id/checkboxspecial"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkboxuppercase" />
+
+            <CheckBox
+                android:id="@+id/checkboxspecial"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:checked="true"
+                android:text="@string/special"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/checkboxlowercase"
+                app:layout_constraintTop_toBottomOf="@+id/checkboxspace" />
+
+            <CheckBox
+                android:id="@+id/checkboxdigits"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:checked="true"
+                android:text="@string/digits_0_1_2"
+                app:layout_constraintEnd_toStartOf="@+id/checkboxbrackets"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkboxlowercase" />
+
+            <CheckBox
+                android:id="@+id/checkboxbrackets"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:checked="true"
+                android:text="@string/brackets"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/checkboxdigits"
+                app:layout_constraintTop_toBottomOf="@+id/checkboxspecial" />
+
+            <CheckBox
+                android:id="@+id/checkboxminus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:checked="true"
+                android:text="@string/minus"
+                app:layout_constraintEnd_toStartOf="@+id/checkboxunderscore"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkboxdigits" />
+
+            <CheckBox
+                android:id="@+id/checkboxunderscore"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:checked="true"
+                android:text="@string/underscore"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/checkboxminus"
+                app:layout_constraintTop_toBottomOf="@+id/checkboxbrackets" />
+
+            <Button
+                android:id="@+id/buttonGenerate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/generate_password"
+                style="@style/my_button_style"
+                android:background="@drawable/blue_button_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkboxminus" />
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/my_text_bigger_black"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/password"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonGenerate"></TextView>
+
+            <EditText
+                android:id="@+id/editTextGeneratedPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/border_grey_2dp"
+                android:inputType="textNoSuggestions"
+                app:layout_constraintEnd_toStartOf="@+id/buttonShowHide"
+                app:layout_constraintHorizontal_weight="7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                android:layout_marginTop="20dp"
+                android:nextFocusUp="@id/editTextGeneratedPassword"
+                android:nextFocusLeft="@id/editTextGeneratedPassword"/>
+                />
+
+            <Button
+                android:id="@+id/buttonShowHide"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="@color/blue"
+                android:background="@drawable/ic_baseline_remove_red_eye_24"
+                app:layout_constraintBottom_toTopOf="@+id/buttonCopyToClipboard"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/editTextGeneratedPassword"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                />
+
+            <Button
+                android:id="@+id/buttonCopyToClipboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                style="@style/my_text_big_blue"
+                android:background="@drawable/border_blue_2dp"
+                android:drawableLeft="@drawable/ic_baseline_file_copy_24"
+                android:drawableTint="@color/blue"
+                android:text="@string/copy_password_to_clipboard"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editTextGeneratedPassword"
+                />
+
+            <TextView
+                android:id="@+id/textViewOutput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonCopyToClipboard"
+                />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
